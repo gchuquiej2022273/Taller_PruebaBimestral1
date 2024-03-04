@@ -5,35 +5,38 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
+import userRouter from "../src/users/user.routes.js"
 
-class Server{
 
-    constructor(){
-        this.app=express();
+class Server {
+
+    constructor() {
+        this.app = express();
         this.port = process.env.PORT;
+        this.userPath = '/gestorTienda/v1/users';
 
         this.middlewares();
         this.dbConnection();
         this.router();
     }
 
-    async dbConnection(){
+    async dbConnection() {
         await dbConnection();
     }
 
-    middlewares(){
-        this.app.use(express.urlencoded({extended: false}));
+    middlewares() {
+        this.app.use(express.urlencoded({ extended: false }));
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(helmet());
         this.app.use(morgan('dev'))
     }
 
-    router(){
-
+    router() {
+        this.app.use(this.userPath, userRouter);
     }
 
-    listen(){
+    listen() {
         this.app.listen(this.port, () => {
             console.log('Server runnig on port', this.port);
         });
