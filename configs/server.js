@@ -5,8 +5,9 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
-import userRouter from "../src/users/user.routes.js"
-
+import userRouter from "../src/users/user.routes.js";
+import adminRouter from "../src/usersAdmin/userA.routes.js";
+import authRouter from "../src/auth/auth.routes.js";
 
 class Server {
 
@@ -14,6 +15,8 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.userPath = '/gestorTienda/v1/users';
+        this.adminpath = '/gestorTienda/v1/admis';
+        this.authPath = '/gestorTienda/v1/auth';
 
         this.middlewares();
         this.dbConnection();
@@ -34,6 +37,8 @@ class Server {
 
     router() {
         this.app.use(this.userPath, userRouter);
+        this.app.use(this.adminpath, adminRouter);
+        this.app.use(this.authPath, authRouter);
     }
 
     listen() {
