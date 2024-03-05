@@ -8,6 +8,8 @@ import { dbConnection } from "./mongo.js";
 import userRouter from "../src/users/user.routes.js";
 import adminRouter from "../src/usersAdmin/userA.routes.js";
 import authRouter from "../src/auth/auth.routes.js";
+import producRouter from "../src/product/produc.routes.js"
+
 
 class Server {
 
@@ -16,7 +18,8 @@ class Server {
         this.port = process.env.PORT;
         this.userPath = '/gestorTienda/v1/users';
         this.adminpath = '/gestorTienda/v1/admis';
-        this.authPath = '/gestorTienda/v1/auth';
+        this.authPath = '/gestorTienda/v2/auth';
+        this.productPath = '/gestorTienda/v1/producto';
 
         this.middlewares();
         this.dbConnection();
@@ -39,6 +42,7 @@ class Server {
         this.app.use(this.userPath, userRouter);
         this.app.use(this.adminpath, adminRouter);
         this.app.use(this.authPath, authRouter);
+        this.app.use(this.productPath, producRouter);
     }
 
     listen() {
