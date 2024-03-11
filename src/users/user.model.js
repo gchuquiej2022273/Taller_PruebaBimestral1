@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: true
     },
-
+    //modificar modelo
     myRecord: {
         type: [String]
     },

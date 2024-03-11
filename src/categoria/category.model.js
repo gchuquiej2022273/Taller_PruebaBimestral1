@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const categorySchema = mongoose.Schema({
 
@@ -12,9 +12,10 @@ const categorySchema = mongoose.Schema({
         default: true
     },
 
-    productos: {
-        type: [String],
-    }
+    productos: [{
+        type: Schema.Types.ObjectId,
+        ref: 'producto',
+    }],
 
 });
 

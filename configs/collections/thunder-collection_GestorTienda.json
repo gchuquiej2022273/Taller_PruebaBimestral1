@@ -1,56 +1,70 @@
 {
     "client": "Thunder Client",
     "collectionName": "GestorTienda",
-    "dateExported": "2024-03-05T23:27:48.796Z",
+    "dateExported": "2024-03-11T01:01:35.858Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "bac80a30-5d8c-4ee1-a185-bb1afed9c1cc",
+            "_id": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
             "name": "user",
             "containerId": "",
-            "created": "2024-03-04T22:48:35.556Z",
+            "created": "2024-03-07T08:44:19.548Z",
             "sortNum": 10000
         },
         {
-            "_id": "b6a55e9c-c744-4438-a04b-8187f4f9aae2",
+            "_id": "4f41e1fe-8590-48e7-93a7-09d98946d21e",
             "name": "admin",
             "containerId": "",
-            "created": "2024-03-05T20:03:57.903Z",
+            "created": "2024-03-07T08:44:19.549Z",
             "sortNum": 20000
         },
         {
-            "_id": "f35b863b-629e-4f5a-82f5-022c22924752",
+            "_id": "1ef4de90-9268-4496-a736-42f5956f928c",
             "name": "auth",
             "containerId": "",
-            "created": "2024-03-05T20:08:15.668Z",
+            "created": "2024-03-07T08:44:19.550Z",
             "sortNum": 30000
         },
         {
-            "_id": "5ab20e66-8e6e-4c47-9b32-5b1ec9e3e69a",
+            "_id": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
             "name": "producto",
-            "containerId": "b6a55e9c-c744-4438-a04b-8187f4f9aae2",
-            "created": "2024-03-05T22:05:10.007Z",
+            "containerId": "4f41e1fe-8590-48e7-93a7-09d98946d21e",
+            "created": "2024-03-07T08:44:19.552Z",
             "sortNum": 40000
         },
         {
-            "_id": "873e5828-ae05-4f3f-8df9-b5745e67f43f",
+            "_id": "02eab846-8d9d-4a22-8df3-32979daf2d99",
             "name": "newRegistros",
-            "containerId": "b6a55e9c-c744-4438-a04b-8187f4f9aae2",
-            "created": "2024-03-05T22:06:27.311Z",
+            "containerId": "4f41e1fe-8590-48e7-93a7-09d98946d21e",
+            "created": "2024-03-07T08:44:19.553Z",
             "sortNum": 60000
+        },
+        {
+            "_id": "6eaca282-a454-44fb-bffb-fce5e3410ae1",
+            "name": "carrito",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
+            "created": "2024-03-10T22:42:40.517Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "562f2584-5a89-41ed-9ae4-a54e0dc2c843",
+            "name": "productos",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
+            "created": "2024-03-10T23:09:15.479Z",
+            "sortNum": 80000
         }
     ],
     "requests": [
         {
-            "_id": "9a0074c6-10dc-4dfb-9894-5a954a7def0f",
-            "colId": "6b73b390-d512-47b7-a322-bd4f7bf4499b",
-            "containerId": "873e5828-ae05-4f3f-8df9-b5745e67f43f",
+            "_id": "f0e78894-08ee-472d-806a-671d5e952b29",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "02eab846-8d9d-4a22-8df3-32979daf2d99",
             "name": "adminRegister",
             "url": "http://localhost:3000/gestorTienda/v1/admis",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T20:04:07.039Z",
-            "modified": "2024-03-05T20:45:17.552Z",
+            "created": "2024-03-07T08:44:19.550Z",
+            "modified": "2024-03-07T09:15:28.010Z",
             "headers": [],
             "params": [],
             "body": {
@@ -62,63 +76,450 @@
             "tests": []
         },
         {
-            "_id": "4566cbb9-d00a-45ab-9c7b-14439d7029d1",
-            "colId": "6b73b390-d512-47b7-a322-bd4f7bf4499b",
-            "containerId": "5ab20e66-8e6e-4c47-9b32-5b1ec9e3e69a",
+            "_id": "78feae99-88a9-4b2b-ae24-410d80a891dc",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
             "name": "newProducto",
             "url": "http://localhost:3000/gestorTienda/v1/producto",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T22:05:33.123Z",
-            "modified": "2024-03-05T23:15:34.206Z",
-            "headers": [],
+            "created": "2024-03-07T08:44:19.552Z",
+            "modified": "2024-03-10T18:49:43.576Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwOTU2MzAsImV4cCI6MTcxMDA5OTIzMH0.Zmd3yT8Z2b7ChimJQ_WUJ0wADbNONRkkE1sF2UQ_-Wk"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProducto\": \"coca-cola\",\n  \"cantidad\": \"100\",\n  \"precio\": \"17.50\",\n  \"categoria\": \"gaseosa\"\n}",
+                "raw": "{\n  \"nameProducto\": \"tortrix3\",\n  \"cantidad\": \"0.25\",\n  \"precio\": \"50.99\",\n  \"categoria\": \"snaks\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "9a73dbe1-6583-4909-b10b-680010286f0a",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "562f2584-5a89-41ed-9ae4-a54e0dc2c843",
+            "name": "BuscarProducto",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/get",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-09T04:34:15.903Z",
+            "modified": "2024-03-10T05:50:44.985Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkNGEyMDA3MDVjMTViMTkyODhkYjMiLCJpYXQiOjE3MTAwNDk4MzMsImV4cCI6MTcxMDA1MzQzM30.L5FJXjWNkc01RqTKbztKrLgwsIFDCiwEaV4ux5CfU7k"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProducto\": \"leche\"\n}",
                 "form": []
             },
             "reqType": "get",
             "tests": []
         },
         {
-            "_id": "f06586a3-6e2a-44ef-a649-eed88c434ee5",
-            "colId": "6b73b390-d512-47b7-a322-bd4f7bf4499b",
-            "containerId": "bac80a30-5d8c-4ee1-a185-bb1afed9c1cc",
+            "_id": "3650dbbf-b826-4cea-a9a6-0102947adbc4",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
             "name": "registerUserPost",
             "url": "http://localhost:3000/gestorTienda/v1/users",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-04T22:48:53.027Z",
-            "modified": "2024-03-05T19:57:33.788Z",
+            "created": "2024-03-07T08:44:19.549Z",
+            "modified": "2024-03-10T23:25:56.179Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"juan\",\n  \"email\": \"juan@gmail.com\",\n  \"password\": \"12345678\"\n}",
+                "raw": "{\n  \"name\": \"daniel\",\n  \"email\": \"Dfrancisco@gmail.com\",\n  \"password\": \"12345678\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "ec1bec83-69fe-48a2-a92b-e78b3b5ff4a6",
-            "colId": "6b73b390-d512-47b7-a322-bd4f7bf4499b",
-            "containerId": "f35b863b-629e-4f5a-82f5-022c22924752",
+            "_id": "98126b05-a740-448b-8923-755fc8fca1da",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "562f2584-5a89-41ed-9ae4-a54e0dc2c843",
+            "name": "filtrarCategoria",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/fil",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-10T06:39:44.440Z",
+            "modified": "2024-03-10T06:42:56.772Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwNTI0NDksImV4cCI6MTcxMDA1NjA0OX0.ERTQFpRRVgs585ROiPNFvFO3BtC81GjizUElcQokQX8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoria\": \"gaseosa\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c6673a28-e591-4633-96cc-360c5d54bc1c",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "562f2584-5a89-41ed-9ae4-a54e0dc2c843",
+            "name": "masVendido",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/masVentido",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-10T06:15:58.943Z",
+            "modified": "2024-03-10T06:16:56.775Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkNGJiYTA3MDVjMTViMTkyODhkYmUiLCJpYXQiOjE3MTAwNTAyNTAsImV4cCI6MTcxMDA1Mzg1MH0.JiGHP60BVLxqYr3cmGVw9ScBTkfTM5B2P7NP1y_lEaA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7aa8305d-5dd2-4d0d-b5a1-410d3c7df04e",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "1ef4de90-9268-4496-a736-42f5956f928c",
             "name": "login",
             "url": "http://localhost:3000/gestorTienda/v2/auth",
             "method": "POST",
             "sortNum": 40000,
-            "created": "2024-03-05T20:08:21.426Z",
-            "modified": "2024-03-05T22:50:46.431Z",
+            "created": "2024-03-07T08:44:19.551Z",
+            "modified": "2024-03-10T23:26:07.769Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"juan@gmail.com\",\n  \"password\": \"12345678\"\n}",
+                "raw": "{\n  \"email\": \"Dfrancisco@gmail.com\",\n  \"password\": \"12345678\"\n}",
                 "form": []
             },
             "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "ef73759a-52f3-4032-9311-9e26e7337297",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "newCategoria",
+            "url": "http://localhost:3000/gestorTienda/v1/categoria",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-07T08:46:36.971Z",
+            "modified": "2024-03-10T18:33:59.906Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwOTU2MzAsImV4cCI6MTcxMDA5OTIzMH0.Zmd3yT8Z2b7ChimJQ_WUJ0wADbNONRkkE1sF2UQ_-Wk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCategory\": \"lacteos\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "1815e6e2-a0c0-4b0b-96fb-fdbd1f3c5ffd",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "DeleteCategoria",
+            "url": "http://localhost:3000/gestorTienda/v1/categoria/delete",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-08T06:45:18.442Z",
+            "modified": "2024-03-10T18:59:21.730Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwOTU2MzAsImV4cCI6MTcxMDA5OTIzMH0.Zmd3yT8Z2b7ChimJQ_WUJ0wADbNONRkkE1sF2UQ_-Wk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCategory\": \"snaks\"\n}",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "8d14abb4-7562-44a6-a847-d09a64e9cbab",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
+            "name": "deletProfile",
+            "url": "http://localhost:3000/gestorTienda/v1/users/delet",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-08T15:51:30.678Z",
+            "modified": "2024-03-08T15:56:48.439Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViMzQ0M2NlNmZiMGNlMDYyYjI2OTIiLCJpYXQiOjE3MDk5MTMzOTYsImV4cCI6MTcwOTkxNjk5Nn0.ps8BCQjJBKKAXWgtYsfGD3etxqkRjx6VDyWrAOcd7FE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3146936d-6c24-46f4-90d7-c98cfe884217",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
+            "name": "editProfile",
+            "url": "http://localhost:3000/gestorTienda/v1/users/update",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-03-08T16:22:35.533Z",
+            "modified": "2024-03-10T05:57:58.468Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkNGJiYTA3MDVjMTViMTkyODhkYmUiLCJpYXQiOjE3MTAwNTAyNTAsImV4cCI6MTcxMDA1Mzg1MH0.JiGHP60BVLxqYr3cmGVw9ScBTkfTM5B2P7NP1y_lEaA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Brandon gomez\",\n  \"password\": \"revivan el server\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "59f91a22-6502-4f7c-8d38-ecf0917f15dc",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "catalogoProduc",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/all",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-03-10T07:05:25.959Z",
+            "modified": "2024-03-10T23:01:52.742Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAxMTE3MDAsImV4cCI6MTcxMDExNTMwMH0.ElbyqhyKDq0cZ5xlDOxAVf7wG3nk_cPeADSjfF9cxpM"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "ebea4698-fc82-4c33-baaf-ae57e8373c98",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "productoAgotado",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/agotado",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-03-10T07:16:14.793Z",
+            "modified": "2024-03-10T07:18:08.808Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwNTQ0OTEsImV4cCI6MTcxMDA1ODA5MX0.4p4PJ8OW-VMc1vzns_2FS-Bngihq63ehrNMAldRzDjc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a75a8eb4-3994-4f3d-b209-9774531fea65",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "BuscarProducto",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/get",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-03-10T07:31:28.337Z",
+            "modified": "2024-03-10T07:31:28.338Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVkNGEyMDA3MDVjMTViMTkyODhkYjMiLCJpYXQiOjE3MTAwNDk4MzMsImV4cCI6MTcxMDA1MzQzM30.L5FJXjWNkc01RqTKbztKrLgwsIFDCiwEaV4ux5CfU7k"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProducto\": \"leche\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "209fe9bb-621a-43d1-91ed-2ead4ad6096f",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "updateProducto",
+            "url": "http://localhost:3000/gestorTienda/v1/producto/65ed54a238bc29652df6d99a",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2024-03-10T07:55:46.911Z",
+            "modified": "2024-03-10T08:07:01.615Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwNTc1OTIsImV4cCI6MTcxMDA2MTE5Mn0.bZhfrwm_3KWktb_lZEM9ZM5lZWfvVbjeRkh-zNVrHHo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProducto\": \"pan\",\n  \"cantidad\": \"20\",\n  \"precio\": \"12.50\",\n  \"categoria\": \"lacteos\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e9701177-4da6-4a2b-8847-158cf05459e6",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "getCategoria",
+            "url": "http://localhost:3000/gestorTienda/v1/categoria/categoriaGet",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-03-10T16:07:38.420Z",
+            "modified": "2024-03-10T19:02:39.462Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwOTU2MzAsImV4cCI6MTcxMDA5OTIzMH0.Zmd3yT8Z2b7ChimJQ_WUJ0wADbNONRkkE1sF2UQ_-Wk"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "9d589448-99bf-416f-882a-b2b920220258",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "c8ce573c-b0f8-4d3c-af2d-ce634fe34bca",
+            "name": "updateCategoria",
+            "url": "http://localhost:3000/gestorTienda/v1/categoria/65ede09621dda44b094aa874",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2024-03-10T17:43:56.243Z",
+            "modified": "2024-03-10T17:48:31.218Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5ODVhZjM0OWY1NmYwNzRiZjUzNzIiLCJpYXQiOjE3MTAwOTI4NDQsImV4cCI6MTcxMDA5NjQ0NH0.tDczA-09kYnXOXCKtRquDz3vk_7n9etOa43gF6NacZU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCategory\": \"snaks\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "83cc4f23-12f5-4984-a9f4-1b0c7d957151",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "6eaca282-a454-44fb-bffb-fce5e3410ae1",
+            "name": "verProducto",
+            "url": "http://localhost:3000/gestorTienda/v1/store/productos",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-03-10T22:42:50.045Z",
+            "modified": "2024-03-10T22:52:14.948Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "eba11cff-7225-411d-a34a-8254605ba7d7",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "6eaca282-a454-44fb-bffb-fce5e3410ae1",
+            "name": "agregarCarrito",
+            "url": "http://localhost:3000/gestorTienda/v1/store/65edff8d373fdbc2c50bad16",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2024-03-10T22:53:57.938Z",
+            "modified": "2024-03-11T00:42:06.656Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cantidad\": \"40\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "3b4e5ce4-7c5b-41e6-b352-63d4e5b394bb",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "6eaca282-a454-44fb-bffb-fce5e3410ae1",
+            "name": "verCarrito",
+            "url": "http://localhost:3000/gestorTienda/v1/store/verCarrito",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-03-10T22:59:49.852Z",
+            "modified": "2024-03-10T23:00:22.743Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c7cab1d8-c56a-4107-b337-f78c10dba73b",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "6eaca282-a454-44fb-bffb-fce5e3410ae1",
+            "name": "factura",
+            "url": "http://localhost:3000/gestorTienda/v1/factura//generar-factura",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2024-03-10T23:20:59.671Z",
+            "modified": "2024-03-11T00:37:48.640Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVlNDE4NGEwOWNjZTczZjMzOWUyYzkiLCJpYXQiOjE3MTAxMTc0NTQsImV4cCI6MTcxMDEyMTA1NH0.kSih5xP-FTzXLrQbgirMeDvPNGDtsUyx2bs7UZ3iHsA"
+                }
+            ],
+            "params": [],
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "7a1de16f-1d32-4f02-9b60-27c5c162ab53",
+            "colId": "12fab8ce-8ff1-41ab-bd03-de80f6edb18d",
+            "containerId": "ab1f3835-8a6b-4698-b9f8-454d94774c42",
+            "name": "HistorialCompras",
+            "url": "http://localhost:3000/gestorTienda/v1/users/historial",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-03-11T00:45:10.483Z",
+            "modified": "2024-03-11T00:49:52.371Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVlNDE4NGEwOWNjZTczZjMzOWUyYzkiLCJpYXQiOjE3MTAxMTc0NTQsImV4cCI6MTcxMDEyMTA1NH0.kSih5xP-FTzXLrQbgirMeDvPNGDtsUyx2bs7UZ3iHsA"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]

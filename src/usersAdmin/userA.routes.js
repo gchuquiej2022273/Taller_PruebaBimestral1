@@ -12,10 +12,10 @@ const router = Router();
 router.post(
     "/",
     [
-        check("email").custom(existenteEmail),
         check("name", "The name is mandatory").not().isEmpty(),
         check("email", "The email is mandatory").isEmail(),
         check("password","La clase es menor a 6 caracteres").isLength({min:6}),
+        check("email").custom(existenteEmail),
         validarCampos,
     ],usuarioAdminPost);
 
